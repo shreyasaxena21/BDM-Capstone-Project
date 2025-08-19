@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mahak Spices | Business Analysis</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      padding-top: 70px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fefefe;
+      color: #333;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.6rem;
+    }
+    .navbar-dark .navbar-nav .nav-link {
+      color: #f8f9fa;
+      transition: 0.3s;
+    }
+    .navbar-dark .navbar-nav .nav-link:hover {
+      color: #ff6b00;
+    }
+    .hero-section {
+      background: url('assets/shop-photo.jpg') no-repeat center center/cover;
+      color: white;
+      padding: 120px 0;
+      position: relative;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    }
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .hero-section .container {
+      position: relative;
+      z-index: 2;
+    }
+    .section {
+      padding: 60px 0;
+    }
+    h2 {
+      font-weight: 700;
+    }
+    h5 {
+      font-weight: 600;
+    }
+    .chart-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+    .chart-img:hover {
+      transform: scale(1.02);
+    }
+    .card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: all 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .btn-primary {
+      background-color: #ff6b00;
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #e85d00;
+    }
+    footer {
+      background-color: #212529;
+      color: white;
+      padding: 30px 0;
+    }
+
+      h2 {
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+  }
+  h2::after {
+    content: '';
+    display: block;
+    margin: 10px auto 0;
+    width: 80px;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #ff6b00, #ff9500);
+  }
+
+  /* Chart summary bullets */
+  .chart-summary {
+    margin-top: 12px;
+    padding-left: 18px;
+    list-style: "🔹 ";
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  /* Subheadings with icon styling */
+  h5 {
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #ff6b00;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* Section background alternate colors */
+  #analysis {
+    background: #fff9f5;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+
+  /* Chart hover glow */
+  .chart-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  }
+  .chart-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="80">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand" href="#">Mahak Spices</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#analysis">Analysis</a></li>
+        <li class="nav-item"><a class="nav-link" href="#recommendations">Recommendations</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero-section text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Optimizing Mahak Spices</h1>
+    <p class="lead mt-3">A data-driven review of sales, transport, and inventory to improve profitability and reduce waste.</p>
+    <a href="#analysis" class="btn btn-primary mt-4 px-4 py-2">Explore Analysis</a>
+  </div>
+</section>
+
+<section id="challenges" class="section bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">🚧 Operational Challenges</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h5>📦 Overdependence on Few Spices</h5>
+          <p>Turmeric and Red Chilli contribute over 75% of the revenue. This concentration increases business risk if demand or supply falters for these two items.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h5>🚚 Transport Cost Variability</h5>
+          <p>Transport costs fluctuate due to inconsistent shipments and third-party pricing changes. The lack of batching causes inefficiencies and cost leaks.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h5>🌡️ Summer Spoilage of Spices</h5>
+          <p>Red Chilli sales dip in summer due to moisture loss, weight reduction, and reduced freshness — all pointing to spoilage without proper storage.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Analysis Section -->
+<section id="analysis" class="section">
+  <div class="container">
+    <h2 class="mb-5 text-center">📊 Business Data Analysis</h2>
+    <div class="row g-5">
+
+      <!-- Revenue Contribution -->
+      <div class="col-md-6">
+        <h5>💰 Revenue Contribution</h5>
+        <img src="assets/pie-revenue.png" class="chart-img" alt="Revenue Pie Chart">
+        <ul class="chart-summary">
+          <li>Turmeric (42.4%) and Red Chilli (33.3%) make up ~76% of revenue.</li>
+          <li>Over-reliance on two spices increases business risk.</li>
+        </ul>
+      </div>
+
+      <!-- ABC Classification -->
+      <div class="col-md-6">
+        <h5>📦 ABC Classification</h5>
+        <img src="assets/abc-pareto.png" class="chart-img" alt="ABC Pareto">
+        <ul class="chart-summary">
+          <li>Category A → Turmeric & Red Chilli (high revenue).</li>
+          <li>Category B → Dhaniya (moderate performance).</li>
+          <li>Category C → Cumin, Ajwain, Fennel (low-performing).</li>
+        </ul>
+      </div>
+
+      <!-- Transport Trend -->
+      <div class="col-md-6">
+        <h5>🚚 Transport Cost Trend</h5>
+        <img src="assets/transport-trend.png" class="chart-img" alt="Transport Line Chart">
+        <ul class="chart-summary">
+          <li>Transport costs peaked in March, signaling inefficiency.</li>
+          <li>Expenses fluctuated between ₹0–₹331, showing inconsistency.</li>
+        </ul>
+      </div>
+
+      <!-- Monthly Sales -->
+      <div class="col-md-6">
+        <h5>📆 Monthly Spice Sales</h5>
+        <img src="assets/monthly-sales.png" class="chart-img" alt="Monthly Sales">
+        <ul class="chart-summary">
+          <li>Turmeric → Steady growth and stable demand.</li>
+          <li>Red Chilli → Strong till Feb, then declines in summer.</li>
+          <li>Dhaniya → Seasonal demand spike in Mar–Apr.</li>
+          <li>Ajwain & Fennel → Consistently weak sales.</li>
+        </ul>
+      </div>
+
+      <!-- Scatter Transport -->
+      <div class="col-md-6">
+        <h5>📉 Quantity vs Transport Cost</h5>
+        <img src="assets/scatter-plot.png" class="chart-img" alt="Scatter Plot">
+        <ul class="chart-summary">
+          <li>Sales usually drive higher transport cost.</li>
+          <li>Outliers reveal overspending even on moderate-sale days.</li>
+        </ul>
+      </div>
+
+      <!-- Heatmap -->
+      <div class="col-md-6">
+        <h5>🔥 Correlation Heatmap</h5>
+        <img src="assets/heatmap.png" class="chart-img" alt="Correlation Heatmap">
+        <ul class="chart-summary">
+          <li>Turmeric strongly correlated with transport cost (bulky loads).</li>
+          <li>Red Chilli & Dhaniya → moderate correlation.</li>
+          <li>Ajwain & Fennel → negligible correlation.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Recommendations Section -->
+<section id="recommendations" class="section bg-light">
+  <div class="container">
+    <h2 class="mb-5 text-center">🔍 Key Recommendations</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card p-4 h-100">
+          <h5>📦 Inventory Diversification</h5>
+          <p>Reduce dependency on Turmeric and Red Chilli by promoting other spices via combos, bundles, and store promotions. This improves risk resilience and boosts underperforming SKUs.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 h-100">
+          <h5>🚚 Logistics Optimization</h5>
+          <p>Plan deliveries in batches and use tools like Google Maps API to optimize routes. Fixed-rate contracts with local vendors can reduce cost volatility and streamline operations.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 h-100">
+          <h5>🌡️ Spoilage Control</h5>
+          <p>Prevent spoilage in summer via shaded storage, FIFO systems, and smart pricing for near-expiry stock. Maintain profitability by reducing losses from seasonal dips.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Chatbot Section -->
+<section class="section">
+  <div class="container">
+    <h5>💬 Ask Your Doubts </h5>
+    <select class="form-select w-100 mt-2" onchange="answerBot(this.value)">
+        <option value="">Select a question</option>
+        <option value="abc">What’s ABC Classification?</option>
+        <option value="chilli">Why Red Chilli spoils in summer?</option>
+        <option value="logistics">How to improve logistics?</option>
+        <option value="inventory">How can I manage perishable inventory better?</option>
+        <option value="transport">Why are transport costs fluctuating so much?</option>
+        <option value="spice-trends">Which spices have seasonal sales patterns?</option>
+        <option value="profitability">How does data help improve profitability?</option>
+        <option value="bundling">What are combo offers and how can they help?</option>
+        <option value="charts">What kind of charts were used in this analysis?</option>
+        <option value="tools">Which tools and software were used in this project?</option>
+        <option value="heatmap">What does the correlation heatmap show?</option>
+        <option value="fifo">What is FIFO and why is it important?</option>
+        <option value="spice-performance">Which spices performed the worst and why?</option>
+        <option value="recommendation-impact">How do the recommendations benefit the shop?</option>
+        <option value="coldstorage">Do I need cold storage for spices?</option>
+    </select>
+    <div id="bot-answer" class="mt-3 text-muted"></div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section text-center">
+  <div class="container">
+    <h2>📁 About This Project</h2>
+    <p class="mt-3">Built using <strong>Python (Pandas, Matplotlib, Seaborn)</strong>, <strong>Excel</strong>, and <strong>Bootstrap</strong>.</p>
+  </div>
+
+
+<!-- Add Report Viewer Button -->
+
+  <div class="container">
+    <!-- <h5>📄 View Full Project Reports</h5> -->
+    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#reportModal">Open Report Viewer</button>
+  </div>
+</section>
+
+<!-- Modal Viewer for Reports -->
+<div class="modal fade" id="reportModal" tabindex="-1">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">📘 Mahak Spices Reports</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs mb-3" id="pdfTabs" role="tablist">
+          <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#final">Final Report</a></li>
+          <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#midterm">Midterm</a></li>
+          <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#proposal">Proposal</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="final">
+            <object data="assets/22f3001013_final.pdf" type="application/pdf" width="100%" height="600px">Unable to display PDF</object>
+          </div>
+          <div class="tab-pane fade" id="midterm">
+            <object data="assets/22f3001013_midterm.pdf" type="application/pdf" width="100%" height="600px">Unable to display PDF</object>
+          </div>
+          <div class="tab-pane fade" id="proposal">
+            <object data="assets/22f3001013_proposal.pdf" type="application/pdf" width="100%" height="600px">Unable to display PDF</object>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <div class="container">
+    <p>&copy; Shreya Saxena | Crafted with ❤️ and Data</p>
+  </div>
+</footer>
+
+<script>
+function answerBot(val) {
+  const answers = {
+  abc: "ABC Classification is a method used to categorize products based on their revenue contribution. 'A' items (like Turmeric) are high-value with high impact on revenue, while 'B' and 'C' items contribute less. This helps prioritize inventory and decision-making.",
+  
+  chilli: "Red Chilli spoils more in summer due to heat-sensitive oils and improper storage. High temperatures increase the chance of mold or degradation if not stored in shaded, ventilated, or cool areas.",
+
+  logistics: "Logistics can be improved by batching deliveries, scheduling transport on high-sales days, and using tools like Google Maps for route optimization. Fixed contracts with transport vendors also help stabilize costs.",
+
+  inventory: "Perishable inventory can be managed better by using FIFO (First-In-First-Out) strategy, seasonal stock reduction, dynamic pricing for nearing-expiry goods, and improved packaging or storage.",
+
+  transport: "Transport cost fluctuation happens due to irregular deliveries, no batching of shipments, or unexpected vendor pricing. Tracking data trends and planning weekly dispatches can stabilize these expenses.",
+
+  "spice-trends": "Spices like Dhaniya and Red Chilli show seasonal spikes. Red Chilli dips during summer (due to spoilage) while Dhaniya picks up in later months—this analysis helps plan purchases smartly.",
+
+  profitability: "Data analysis helps identify which products bring the most revenue, where losses happen (like spoilage or logistics), and how to optimize operations to make smarter, profitable decisions.",
+
+  bundling: "Combo offers group fast-selling and slow-moving spices together to improve sales of underperforming items. This strategy also attracts bulk buyers and promotes less popular spices.",
+
+  charts: "We used Pie Charts (revenue), Bar Charts (transport cost), Line Charts (sales trends), Scatter Plots (cost vs. quantity), and Heatmaps (correlation) to uncover business insights visually.",
+
+  tools: "The project used Python (Pandas, Matplotlib, Seaborn) for analysis, Excel for cleaning and organizing, and HTML/CSS/Bootstrap to create this website hosted on GitHub Pages.",
+
+  heatmap: "The heatmap shows how spice sales and transport costs are related. For example, Red Chilli and transport had a 0.34 correlation, suggesting they often move together—possibly leading to spoilage risk.",
+
+  fifo: "FIFO means 'First In, First Out'. It ensures older stock is sold before newer stock, preventing spoilage or expired items in inventory—especially important for spices like Red Chilli.",
+
+  "spice-performance": "Ajwain, Cumin, and Fennel showed low sales throughout the months. These spices could be strategically bundled or stocked in lower quantities to reduce losses.",
+
+  "recommendation-impact": "By following the recommendations—diversifying inventory, improving logistics, and managing spoilage—the shop can boost efficiency, save costs, and grow sustainably.",
+
+  coldstorage: "While full-scale cold storage isn’t mandatory, shaded and ventilated racks or evaporative cooling solutions can help preserve sensitive spices like Red Chilli during hot months."
+};
+
+  document.getElementById('bot-answer').innerText = answers[val] || "";
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
