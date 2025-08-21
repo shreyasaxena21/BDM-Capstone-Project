@@ -11,7 +11,7 @@
 Mahak Spices, a **B2B wholesale spice trading company** located in Subhash Nagar, Shahjahanpur, Uttar Pradesh, supplies high-quality spices to local retailers and businesses. Despite its strong local presence, the business faces operational challenges that limit profitability and scalability.  
 
 This project applies **data analytics** to study these inefficiencies and proposes **data-driven strategies** to enhance operational efficiency and ensure sustainable growth.  
-
+🔗 **Explore the Interactive Project Website:** [bdm-capstone-project.vercel.app](https://bdm-capstone-project.vercel.app/)  
 ---
 
 ## 🎯 Objectives (Problem Statements)  
@@ -128,4 +128,5 @@ Ultimately, this approach positions the company for **long-term sustainable grow
 - Proposal Report  
 - Midterm Report  
 - Final Report  
-- Presentation Slides  
+- Presentation Slides
+- [Static Website](https://bdm-capstone-project.vercel.app/)  
