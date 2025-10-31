@@ -15,6 +15,8 @@ This project applies **data analytics** to study these inefficiencies and propos
 
 ---
 
+![BDM Capstone Certificate](./assets/BDM_Certificate.png)
+
 ## 🎯 Objectives (Problem Statements)  
 1. **Overdependence on Few Spices**  
    - Heavy reliance on Turmeric and Red Chilli (~76% of revenue).  
